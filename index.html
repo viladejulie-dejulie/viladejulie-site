@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vila Dejulie · Lista de Espera</title>
+<meta name="description" content="Um hotel boutique nascendo em Jacumã, na Costa do Conde, Paraíba. Entre na lista e acompanhe o desenrolar." />
+<link rel="icon" type="image/svg+xml" href="logo-vila-dejulie.svg" />
+
+<!-- Open Graph (link bonito quando compartilhado) -->
+<meta property="og:title" content="Vila Dejulie · Jacumã, Costa do Conde" />
+<meta property="og:description" content="Um hotel boutique nascendo à beira da Costa do Conde. Entre na lista de espera." />
+<meta property="og:type" content="website" />
+<!-- TODO: trocar pela URL real e por uma imagem 1200x630 do empreendimento -->
+<meta property="og:image" content="og-image.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --creme:   #F1ECE0;
+    --azul:    #2D5A6B;
+    --terra:   #8B3F26;
+    --preto:   #2D2D2D;
+    --creme-2: #E7E0D0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--creme);
+    color: var(--preto);
+    line-height: 1.6;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- HERO ---------- */
+  header.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 64px 24px;
+    /* Opcional: descomente e aponte para uma foto do empreendimento para fundo
+    background: linear-gradient(rgba(241,236,224,.86), rgba(241,236,224,.92)), url('hero.jpg') center/cover; */
+  }
+
+  /* Marca — SLOT DO LOGO.
+     ⚠️ Cole o conteúdo do VilaDejulie.svg dentro de .logo (NUNCA reconstruir o logo).
+     Enquanto não colar, fica o wordmark de texto abaixo. */
+  .logo { width: 64px; height: 64px; margin-bottom: 28px; opacity: .9; }
+  .wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: .42em;
+    text-transform: uppercase;
+    color: var(--azul);
+    margin-bottom: 32px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: .34em;
+    text-transform: uppercase;
+    color: var(--terra);
+    font-weight: 500;
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.1rem, 6vw, 3.4rem);
+    line-height: 1.12;
+    color: var(--azul);
+    margin-bottom: 26px;
+  }
+  .lede {
+    font-size: 1.05rem;
+    max-width: 30em;
+    margin: 0 auto 40px;
+    color: #4a463f;
+  }
+  .lede em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.18em; color: var(--terra); }
+
+  /* ---------- FORM ---------- */
+  .form-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid var(--creme-2);
+    border-radius: 4px;
+    padding: 30px 26px;
+    text-align: left;
+    box-shadow: 0 18px 50px -28px rgba(45,90,107,.45);
+  }
+  .form-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--preto);
+    margin-bottom: 4px;
+  }
+  .form-card p.sub { font-size: .9rem; color: #6b665d; margin-bottom: 20px; }
+
+  label { display:block; font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; color:var(--azul); margin: 0 0 6px 2px; font-weight:500; }
+  input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border: 1px solid var(--creme-2);
+    border-radius: 3px;
+    background: var(--creme);
+    font-family: inherit;
+    font-size: .98rem;
+    color: var(--preto);
+    transition: border-color .2s;
+  }
+  input:focus { outline: none; border-color: var(--azul); }
+  input::placeholder { color: #a8a194; }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 3px;
+    background: var(--terra);
+    color: var(--creme);
+    font-family: 'DM Sans', sans-serif;
+    font-size: .96rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    cursor: pointer;
+    transition: background .2s, transform .1s;
+  }
+  button:hover { background: #74321c; }
+  button:active { transform: translateY(1px); }
+
+  .reassure { font-size: .78rem; color: #8a8478; text-align: center; margin-top: 14px; }
+  .reassure em { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1em; }
+
+  /* ---------- O QUE VEM ---------- */
+  section.about { padding: 72px 0; border-top: 1px solid var(--creme-2); }
+  section.about h3 {
+    font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500;
+    font-size: 1.9rem; color: var(--azul); text-align:center; margin-bottom: 40px;
+  }
+  .cols { display: grid; grid-template-columns: 1fr; gap: 30px; }
+  @media (min-width: 620px){ .cols { grid-template-columns: repeat(3, 1fr); } }
+  .col h4 {
+    font-family:'Cormorant Garamond',serif; font-weight:600; font-size:1.15rem;
+    color: var(--terra); margin-bottom: 8px;
+  }
+  .col p { font-size: .9rem; color:#5a554c; }
+
+  /* ---------- MAPA ---------- */
+  section.mapa { padding: 72px 0; border-top: 1px solid var(--creme-2); text-align: center; }
+  section.mapa h3 {
+    font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500;
+    font-size: 1.9rem; color: var(--azul); margin-bottom: 14px;
+  }
+  section.mapa .mapa-sub { font-size:.95rem; color:#5a554c; max-width:30em; margin:0 auto 30px; }
+  .map-frame {
+    border:1px solid var(--creme-2); border-radius:6px; overflow:hidden;
+    box-shadow:0 18px 50px -30px rgba(45,90,107,.4); line-height:0;
+  }
+  .map-frame iframe { width:100%; height:340px; border:0; display:block; }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    text-align:center; padding: 48px 24px 60px; border-top:1px solid var(--creme-2);
+    background: var(--creme-2);
+  }
+  footer .ig { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.25rem; color:var(--azul); }
+  footer .loc { font-size:.74rem; letter-spacing:.2em; text-transform:uppercase; color:var(--terra); margin-top:8px; }
+  footer .maplink {
+    display:inline-block; margin-top:16px; font-size:.82rem; letter-spacing:.03em;
+    color:var(--azul); text-decoration:none;
+    border-bottom:1px solid rgba(45,90,107,.4); padding-bottom:2px; transition:opacity .2s;
+  }
+  footer .maplink:hover { opacity:.6; }
+
+  /* mensagem de sucesso */
+  #ok { display:none; text-align:center; }
+  #ok h2 { font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--azul); font-size:1.6rem; margin-bottom:8px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <!-- Logo oficial Vila Dejulie (azulejo hidráulico) — vetor do sistema de logos do Claude Design -->
+  <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vila Dejulie">
+    <g fill="#2D5A6B" fill-rule="evenodd">
+      <path d="M44.42 0 L44.42 6.86 L6.85 6.86 L6.85 44.31 L0 44.31 L0 0 Z"></path>
+      <path d="M100 44.27 L93.15 44.27 L93.15 6.85 L55.58 6.85 L55.58 0 L100 0 Z"></path>
+      <path d="M0 55.73 L6.85 55.73 L6.85 93.15 L44.46 93.15 L44.46 100 L0 100 Z"></path>
+      <path d="M55.58 100 L55.58 93.14 L93.15 93.14 L93.15 55.69 L100 55.69 L100 100 Z"></path>
+      <path d="M57.19 32.58 L52.43 14.40 L55.75 12.60 L68.39 26.51 Z"></path>
+      <path d="M31.36 26.49 L44.02 12.61 L47.34 14.41 L42.55 32.59 Z"></path>
+      <path d="M73.74 31.38 L87.69 44.07 L85.89 47.37 L67.67 42.54 Z"></path>
+      <path d="M67.65 57.48 L85.84 52.54 L87.66 55.83 L73.79 68.60 Z"></path>
+      <path d="M68.57 73.72 L55.68 87.40 L52.39 85.54 L57.48 67.44 Z"></path>
+      <path d="M42.74 67.51 L47.31 85.74 L43.98 87.51 L31.48 73.47 Z"></path>
+      <path d="M26.32 68.60 L12.42 55.87 L14.22 52.57 L32.43 57.46 Z"></path>
+      <path d="M32.47 42.40 L14.36 47.64 L12.49 44.37 L26.15 31.38 Z"></path>
+    </g>
+    <path d="M49.57 42.80 L57.20 49.88 L50.15 57.49 L42.52 50.40 Z" fill="#4D3225" fill-rule="evenodd"></path>
+  </svg>
+  <div class="wordmark">Vila Dejulie</div>
+
+  <div class="eyebrow">Jacumã · Costa do Conde · Paraíba</div>
+  <h1>Um hotel boutique<br />nascendo à beira<br />da Costa do Conde.</h1>
+  <p class="lede">Eu escolhi Jacumã pra criar um lugar de chegar e ficar.<br />
+  Estou construindo, aos poucos, no tempo do mar. <em>Acompanhe o desenrolar.</em></p>
+
+  <!-- Formulário conectado ao Brevo (HTML simples) — captura E-mail + WhatsApp -->
+  <form class="form-card" id="sib-form" method="POST"
+        action="https://640b349c.sibforms.com/serve/MUIFADdXU6dhT2GOmgFqqkm3ti35WAZvFoTUV9yDjyxBtkCoDOKtGdsP3bbaAlTFbGqEbeB71Rp84hQjIhdpqc58A64RDTimFwUfnxeAy8tKH3kqW4ldFinxRAePor6Pq0BsO39_fpGAS0Yi855fPa3yacstYltvKoI5Ik8jo3SAYtj3lykTocNouQf80mLLjrUNAoF0ETwYF0yHmQ==">
+    <h2>Entre na lista de espera</h2>
+    <p class="sub">Seja das primeiras pessoas a saber quando as portas abrirem.</p>
+
+    <label for="EMAIL">E-mail</label>
+    <input type="email" id="EMAIL" name="EMAIL" placeholder="seu@email.com" autocomplete="email" required />
+
+    <label for="SMS">WhatsApp</label>
+    <input type="tel" id="SMS" name="SMS" placeholder="DDD + número (ex: 83912345678)" autocomplete="tel" required />
+    <input type="hidden" name="SMS__COUNTRY_CODE" value="+55" />
+
+    <button type="submit">Quero acompanhar</button>
+    <p class="reassure">Sem spam. Só notícias da Vila, <em>no tempo do mar.</em></p>
+
+    <!-- Campos técnicos do Brevo (não remover) -->
+    <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off"
+           style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true" />
+    <input type="hidden" name="locale" value="pt" />
+    <input type="hidden" name="html_type" value="simple" />
+  </form>
+</header>
+
+<section class="about">
+  <div class="wrap">
+    <h3>O que está nascendo</h3>
+    <div class="cols">
+      <div class="col">
+        <h4>A Vila</h4>
+        <p>Um andar boutique inteiro em Jacumã — quartos com alma de Sertão, Agreste e Litoral.</p>
+      </div>
+      <div class="col">
+        <h4>A Dejulie Store</h4>
+        <p>Curadoria de artesanato nordestino, café e roupas — o térreo que recebe quem chega.</p>
+      </div>
+      <div class="col">
+        <h4>A Costa do Conde</h4>
+        <p>Vinte quilômetros de praia, falésia e mar verde. O lugar que eu voltei pra honrar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mapa">
+  <div class="wrap">
+    <h3>Onde</h3>
+    <p class="mapa-sub">Em Jacumã, à beira da Costa do Conde —<br />o chão onde a Vila está nascendo.</p>
+    <div class="map-frame">
+      <iframe
+        src="https://maps.google.com/maps?q=-7.285565819909086,-34.80232940616367&amp;z=16&amp;output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+        title="Localização da Vila Dejulie em Jacumã"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ig">@viladejulie</div>
+  <div class="loc">Jacumã · Costa do Conde · Paraíba</div>
+  <a class="maplink"
+     href="https://www.google.com/maps/search/?api=1&amp;query=-7.285565819909086,-34.80232940616367"
+     target="_blank" rel="noopener">Ver a localização no mapa →</a>
+</footer>
+
+</body>
+</html>
