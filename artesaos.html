@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://viladejulie.com.br/artesaos.html">
+<title>Para quem faz · Vila Dejulie & Dejulie Store</title>
+<meta name="description" content="Você faz arte com as mãos no Nordeste? A Julie quer te conhecer. Cadastre-se para fazer parte da rede de artesãos da Dejulie Store." />
+<link rel="icon" type="image/svg+xml" href="logo-dejulie-store.svg" />
+<meta property="og:title" content="Para quem faz · Vila Dejulie" />
+<meta property="og:description" content="Você faz com as mãos? A Julie quer te conhecer." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
+
+<style>
+  :root{ --creme:#F1ECE0; --azul:#2D5A6B; --terra:#8B3F26; --preto:#2D2D2D; --creme-2:#E7E0D0; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'DM Sans',system-ui,sans-serif; background:var(--creme); color:var(--preto); line-height:1.62; font-weight:300; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:680px; margin:0 auto; padding:0 24px; }
+  .eyebrow{ font-size:11px; letter-spacing:.34em; text-transform:uppercase; color:var(--terra); font-weight:500; margin-bottom:20px; }
+  .serif-it{ font-family:'Cormorant Garamond',serif; font-style:italic; }
+
+  header.hero{
+    position:relative; min-height:88vh; display:flex; flex-direction:column;
+    justify-content:center; align-items:center; text-align:center; padding:64px 24px;
+    background:linear-gradient(rgba(241,236,224,.78),rgba(241,236,224,.90)), url('img/guia-jacuma.jpg') center/cover;
+  }
+  .hero .logo{ width:60px; height:60px; margin-bottom:24px; }
+  .wordmark{ font-family:'Cormorant Garamond',serif; font-weight:500; font-size:13px; letter-spacing:.42em; text-transform:uppercase; color:var(--azul); margin-bottom:30px; }
+  h1{ font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:clamp(2rem,6vw,3.3rem); line-height:1.1; color:var(--azul); margin-bottom:24px; }
+  .lede{ font-size:1.06rem; max-width:30em; margin:0 auto; color:#43403a; }
+  .lede em{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.16em; color:var(--terra); }
+  .scrollcue{ position:absolute; bottom:26px; left:50%; transform:translateX(-50%); font-size:20px; color:var(--azul); opacity:.5; animation:bob 2s ease-in-out infinite; }
+  @keyframes bob{ 0%,100%{transform:translate(-50%,0)} 50%{transform:translate(-50%,7px)} }
+
+  section{ padding:80px 0; }
+  .bordered{ border-top:1px solid var(--creme-2); }
+  .center{ text-align:center; }
+  .sec-lead{ font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:clamp(1.7rem,4.4vw,2.5rem); line-height:1.14; color:var(--azul); margin-bottom:24px; }
+  .narrow p{ max-width:33em; margin:0 auto 18px; color:#4a463f; font-size:1.02rem; }
+  .pullquote{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(1.4rem,3.4vw,1.9rem); color:var(--terra); margin-top:28px; line-height:1.22; }
+
+  /* O QUE EU PERGUNTO */
+  section.pergunto{ background:var(--creme-2); }
+  .ask-grid{ max-width:640px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:24px; }
+  @media(min-width:620px){ .ask-grid{ grid-template-columns:1fr 1fr; gap:28px 40px; } }
+  .ask{ padding-left:16px; border-left:2px solid var(--terra); text-align:left; }
+  .ask h4{ font-family:'Cormorant Garamond',serif; font-weight:600; font-style:italic; font-size:1.2rem; color:var(--terra); margin-bottom:4px; }
+  .ask p{ font-size:.92rem; color:#5a554c; }
+
+  /* FORM */
+  section.form{ border-top:1px solid var(--creme-2); text-align:center; }
+  .form-intro{ width:100%; max-width:460px; margin:0 auto 22px; }
+  .form-intro h2{ font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:600; font-size:1.9rem; color:var(--preto); margin-bottom:6px; }
+  .form-intro .sub{ font-size:.92rem; color:#6b665d; }
+  .form-slot{ max-width:540px; margin:0 auto; }
+  .form-slot iframe{ width:100%; border:0; }
+  .placeholder-note{ border:1px dashed rgba(139,63,38,.4); border-radius:8px; padding:28px 22px; color:#8a6a55; font-size:.9rem; background:rgba(231,224,208,.5); }
+  .reassure{ font-size:.78rem; color:#8a8478; text-align:center; margin-top:18px; }
+  .reassure em{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1em; }
+
+  footer{ text-align:center; padding:50px 24px 60px; border-top:1px solid var(--creme-2); background:var(--creme-2); }
+  footer .ig{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.3rem; color:var(--azul); text-decoration:none; }
+  footer .loc{ font-size:.74rem; letter-spacing:.2em; text-transform:uppercase; color:var(--terra); margin-top:8px; }
+  footer .back{ display:inline-block; margin-top:16px; font-size:.82rem; color:var(--azul); text-decoration:none; border-bottom:1px solid rgba(45,90,107,.4); padding-bottom:2px; }
+
+  /* FORM DE ARTESÃOS */
+  .art-form{ max-width:480px; margin:0 auto; text-align:left; background:#fff; border:1px solid var(--creme-2); border-radius:8px; box-shadow:0 18px 50px -30px rgba(139,63,38,.5); padding:26px 24px; }
+  .art-form label{ display:block; font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--azul); font-weight:500; margin:14px 0 6px; }
+  .art-form label:first-of-type{ margin-top:0; }
+  .art-form input, .art-form select, .art-form textarea{ width:100%; font-family:'DM Sans',sans-serif; background:var(--creme); border:1px solid var(--creme-2); border-radius:3px; color:var(--preto); font-size:.98rem; padding:11px 13px; }
+  .art-form input:focus, .art-form select:focus, .art-form textarea:focus{ border-color:var(--terra); outline:none; }
+  .art-form textarea{ resize:vertical; }
+  .art-btn{ width:100%; margin-top:20px; background:var(--terra); color:var(--creme); border:0; border-radius:3px; font-family:'DM Sans',sans-serif; font-weight:500; font-size:1rem; padding:14px; letter-spacing:.03em; cursor:pointer; transition:background .2s; }
+  .art-btn:hover{ background:#74321c; }
+  .art-alt{ font-size:.85rem; color:#6b665d; text-align:center; margin-top:16px; }
+  .art-alt a{ color:var(--azul); }
+
+  /* ===== Formulário Brevo com a identidade do site ===== */
+  .sib-form{ padding:0!important; background:transparent!important; }
+  #sib-container{ max-width:480px!important; margin:0 auto; background:#fff!important; border:1px solid var(--creme-2)!important; border-radius:8px!important; box-shadow:0 18px 50px -30px rgba(139,63,38,.5); padding:26px 24px!important; text-align:left!important; direction:ltr; }
+  #sib-form .sib-form-block{ padding:6px 0!important; }
+  #sib-form .entry__label{ font-family:'DM Sans',sans-serif!important; font-size:.72rem!important; letter-spacing:.08em; text-transform:uppercase; color:var(--azul)!important; font-weight:500!important; margin-bottom:6px!important; }
+  #sib-form .entry__label .opt{ text-transform:none; letter-spacing:0; color:#a59d8c; font-weight:400; }
+  #sib-form .input, #sib-form select.input, #sib-form textarea.input{ width:100%; font-family:'DM Sans',sans-serif!important; background:var(--creme)!important; border:1px solid var(--creme-2)!important; border-radius:3px!important; color:var(--preto)!important; font-size:.98rem!important; padding:11px 13px!important; box-shadow:none!important; }
+  #sib-form .input:focus{ border-color:var(--terra)!important; outline:none!important; }
+  #sib-form .entry__specification{ font-family:'DM Sans',sans-serif!important; font-size:.72rem!important; color:#8a8478!important; }
+  /* ofício em "chips" */
+  #sib-form .entry_mcq > .form__label-row > div{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+  #sib-form .entry__choice{ margin:0!important; }
+  #sib-form .entry__choice label{ display:flex!important; align-items:center; gap:6px; background:var(--creme); border:1px solid var(--creme-2); border-radius:20px; padding:6px 13px; cursor:pointer; font-size:.85rem; color:var(--preto); }
+  /* botão */
+  #sib-form .sib-form-block__button{ width:100%; background:var(--terra)!important; color:var(--creme)!important; font-family:'DM Sans',sans-serif!important; font-weight:500!important; font-size:1rem!important; border-radius:3px!important; padding:14px!important; border:0!important; cursor:pointer; letter-spacing:.03em; justify-content:center; }
+  #sib-form .sib-form-block__button:hover{ background:#74321c!important; }
+  /* mensagens sucesso/erro */
+  .sib-form-message-panel{ max-width:480px; margin:0 auto 16px; font-family:'DM Sans',sans-serif!important; border-radius:6px!important; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="logo" viewBox="0 0 100 100" role="img" aria-label="Dejulie Store" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#B05537" fill-rule="evenodd">
+      <path d="M44.42 0 L44.42 6.86 L6.85 6.86 L6.85 44.31 L0 44.31 L0 0 Z"/>
+      <path d="M100 44.27 L93.15 44.27 L93.15 6.85 L55.58 6.85 L55.58 0 L100 0 Z"/>
+      <path d="M0 55.73 L6.85 55.73 L6.85 93.15 L44.46 93.15 L44.46 100 L0 100 Z"/>
+      <path d="M55.58 100 L55.58 93.14 L93.15 93.14 L93.15 55.69 L100 55.69 L100 100 Z"/>
+      <path d="M57.19 32.58 L52.43 14.40 L55.75 12.60 L68.39 26.51 Z"/>
+      <path d="M31.36 26.49 L44.02 12.61 L47.34 14.41 L42.55 32.59 Z"/>
+      <path d="M73.74 31.38 L87.69 44.07 L85.89 47.37 L67.67 42.54 Z"/>
+      <path d="M67.65 57.48 L85.84 52.54 L87.66 55.83 L73.79 68.60 Z"/>
+      <path d="M68.57 73.72 L55.68 87.40 L52.39 85.54 L57.48 67.44 Z"/>
+      <path d="M42.74 67.51 L47.31 85.74 L43.98 87.51 L31.48 73.47 Z"/>
+      <path d="M26.32 68.60 L12.42 55.87 L14.22 52.57 L32.43 57.46 Z"/>
+      <path d="M32.47 42.40 L14.36 47.64 L12.49 44.37 L26.15 31.38 Z"/>
+    </g>
+    <path d="M49.57 42.80 L57.20 49.88 L50.15 57.49 L42.52 50.40 Z" fill="#C9A227" fill-rule="evenodd"/>
+  </svg>
+  <div class="wordmark">Dejulie Store</div>
+  <div class="eyebrow">Para quem faz com as mãos</div>
+  <h1>Você faz com as mãos?<br/>Então eu quero te conhecer.</h1>
+  <p class="lede">Eu sou a Julie. Estou montando, com calma, a rede de quem faz <em>arte de verdade</em> no Nordeste — pra um dia, na Dejulie Store, dar a essa gente o valor que ela merece.</p>
+  <div class="scrollcue">↓</div>
+</header>
+
+<section class="center">
+  <div class="wrap narrow">
+    <div class="eyebrow">O convite</div>
+    <p class="sec-lead">Eu fui buscar quem faz.<br/>Agora quero que quem faz me ache.</p>
+    <p>Barro, couro, bordado, renda, palha, madeira, xilogravura. Se você é do Nordeste e transforma matéria em beleza com as próprias mãos, o seu nome merece estar na minha lista.</p>
+    <p>Não é promessa de venda — a loja ainda está nascendo. É o começo de uma relação: eu quero conhecer o seu trabalho, guardar a sua história, e quem sabe, um dia, a gente caminha junto.</p>
+    <p class="pullquote">Uma marca que nasce da terra começa honrando quem trabalha a terra.</p>
+  </div>
+</section>
+
+<section class="pergunto center">
+  <div class="wrap">
+    <div class="eyebrow">É rapidinho</div>
+    <p class="sec-lead">O que eu queria saber de você</p>
+    <div class="ask-grid">
+      <div class="ask"><h4>Quem é você</h4><p>Seu nome (e o do seu ateliê, se tiver).</p></div>
+      <div class="ask"><h4>De onde você fala</h4><p>A sua cidade e o seu estado.</p></div>
+      <div class="ask"><h4>O que você faz</h4><p>O seu ofício — barro, couro, bordado, palha, madeira…</p></div>
+      <div class="ask"><h4>Como ver o seu trabalho</h4><p>Seu Instagram ou um link com fotos das peças.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="form">
+  <div class="wrap">
+    <div class="form-intro">
+      <h2>Quero fazer parte</h2>
+      <p class="sub">Preenche aqui embaixo. Eu leio cada um. ◆</p>
+    </div>
+
+    <!-- Begin Brevo Form -->
+    <div class="sib-form">
+      <div id="sib-form-container" class="sib-form-container">
+        <div id="error-message" class="sib-form-message-panel" style="color:#661d1d;background-color:#ffeded;border-color:#ff4949;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">Não consegui salvar seu cadastro. Confira os campos e tente de novo.</span>
+          </div>
+        </div>
+        <div id="success-message" class="sib-form-message-panel" style="color:#085229;background-color:#e7faf0;border-color:#13ce66;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">Recebido! Obrigada por deixar seu trabalho com a Julie. ◆</span>
+          </div>
+        </div>
+        <div id="sib-container" class="sib-container--large sib-container--vertical">
+          <form id="sib-form" method="POST" action="https://640b349c.sibforms.com/serve/MUIFAEC02IWnmh2EWfM8PeUfLSdglVxU2u5nRb6EHyJqgx02f_2lg7_Fa5U3nDnKrl5_WRpW2PkUo-D8ImqxR14FtJkczDTX2p2CevK1JKrh2DWn4kMHkzrAiGReojpR_MZO0R8Fh0w2KXxq6FxuTB4dvSud5p1XGpCpvC1MXQziekeZWKTrn17mJpmYTyw1EPH-nQ8kudOxdmVffg==" data-type="subscription">
+
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block"><div class="form__label-row">
+                <label class="entry__label" for="NOME" data-required="*">Seu nome</label>
+                <div class="entry__field"><input class="input" maxlength="200" type="text" id="NOME" name="NOME" autocomplete="off" placeholder="Como a gente te chama?" data-required="true" required /></div>
+              </div><label class="entry__error entry__error--primary"></label></div>
+            </div>
+
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block"><div class="form__label-row">
+                <label class="entry__label" for="ATELIE">Nome do seu ateliê <span class="opt">(opcional)</span></label>
+                <div class="entry__field"><input class="input" maxlength="200" type="text" id="ATELIE" name="ATELIE" autocomplete="off" placeholder="Se tiver um nome" /></div>
+              </div><label class="entry__error entry__error--primary"></label></div>
+            </div>
+
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block"><div class="form__label-row">
+                <label class="entry__label" for="CIDADE_UF" data-required="*">Sua cidade e estado</label>
+                <div class="entry__field"><input class="input" maxlength="200" type="text" id="CIDADE_UF" name="CIDADE_UF" autocomplete="off" placeholder="Ex.: Conde — PB" data-required="true" required /></div>
+              </div><label class="entry__error entry__error--primary"></label></div>
+            </div>
+
+            <div class="sib-select sib-form-block">
+              <div class="form__entry entry_block"><div class="form__label-row">
+                <label class="entry__label" for="OFICIO" data-required="*">O seu ofício</label>
+                <div class="entry__field">
+                  <select class="input" id="OFICIO" name="OFICIO" data-required="true" required>
+                    <option value="" disabled selected>Selecione…</option>
+                    <option value="1">Barro</option>
+                    <option value="2">Cerâmica</option>
+                    <option value="3">Renda</option>
+                    <option value="4">Bordado</option>
+                    <option value="5">Palha</option>
+                    <option value="6">Fibra</option>
+                    <option value="7">Madeira</option>
+                    <option value="8">Couro</option>
+                    <option value="9">Xilogravura</option>
+                    <option value="10">Doces</option>
+                    <option value="11">Outros</option>
+                  </select>
+                </div>
+              </div><label class="entry__error entry__error--primary"></label></div>
+            </div>
+
+            <div class="sib-sms-field sib-form-block">
+              <div class="form__entry entry_block"><div class="form__label-row">
+                <label class="entry__label" for="SMS" data-required="*">Seu WhatsApp</label>
+                <div class="sib-sms-input-wrapper" style="direction:ltr">
+                  <div class="sib-sms-input" data-placeholder="WhatsApp" data-required="true" data-country-code="BR" data-value="" data-attributename="SMS">
+                    <div class="entry__field">
+                      <select class="input" name="SMS__COUNTRY_CODE" data-required="true">
+                        <option value="+55">+55 BR</option>
+                      </select>
+                    </div>
+                    <div class="entry__field" style="width:100%">
+                      <input type="tel" class="input" id="SMS" name="SMS" autocomplete="off" placeholder="(83) 90000-0000" data-required="true" required />
+                    </div>
+                  </div>
+                </div>
+              </div><label class="entry__error entry__error--primary"></label>
+              <label class="entry__specification">Ex.: (83) 90000-0000</label></div>
+            </div>
+
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block"><div class="form__label-row">
+                <label class="entry__label" for="INSTAGRAM">Instagram ou link com fotos <span class="opt">(opcional)</span></label>
+                <div class="entry__field"><input class="input" maxlength="200" type="text" id="INSTAGRAM" name="INSTAGRAM" autocomplete="off" placeholder="@seuatelie ou um link" /></div>
+              </div><label class="entry__error entry__error--primary"></label></div>
+            </div>
+
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block"><div class="form__label-row">
+                <label class="entry__label" for="MENSAGEM">Conte um pouco sobre o seu trabalho <span class="opt">(opcional)</span></label>
+                <div class="entry__field"><input class="input" maxlength="200" type="text" id="MENSAGEM" name="MENSAGEM" autocomplete="off" placeholder="O que você faz, há quanto tempo…" /></div>
+              </div><label class="entry__error entry__error--primary"></label></div>
+            </div>
+
+            <div class="sib-form-block" style="text-align:center">
+              <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512"><path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/></svg>
+                Quero fazer parte
+              </button>
+            </div>
+
+            <input type="text" name="email_address_check" value="" class="input--hidden">
+            <input type="hidden" name="locale" value="pt">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Brevo Form -->
+
+    <p class="art-alt">Prefere falar direto? <a href="https://wa.me/5511962542503?text=Ol%C3%A1!%20Quero%20cadastrar%20meu%20trabalho%20na%20Dejulie%20Store." target="_blank" rel="noopener">Chama no WhatsApp →</a></p>
+
+    <p class="reassure"><em>Seus dados ficam só comigo, pra te conhecer. Não compartilho com ninguém.</em></p>
+  </div>
+</section>
+
+<footer>
+  <a class="ig" href="https://instagram.com/viladejulie">@viladejulie</a>
+  <div class="loc">Costa do Conde · Paraíba</div>
+  <a class="back" href="index.html">← Voltar para o site</a>
+</footer>
+
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Escolha um código de país';
+  window.LOCALE = 'pt';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "A informação fornecida não é válida. Confira o campo e tente de novo.";
+  window.REQUIRED_ERROR_MESSAGE = "Este campo não pode ficar em branco.";
+  window.GENERIC_INVALID_MESSAGE = "A informação fornecida não é válida. Confira o campo e tente de novo.";
+  window.INVALID_NUMBER = "A informação fornecida não é válida. Confira o campo e tente de novo.";
+  window.REQUIRED_MULTISELECT_MESSAGE = 'Selecione pelo menos 1 opção';
+  window.translation = { common: { selectedList: '{quantity} lista selecionada', selectedLists: '{quantity} listas selecionadas', selectedOption: '{quantity} selecionado', selectedOptions: '{quantity} selecionados' } };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+</body>
+</html>

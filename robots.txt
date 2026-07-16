@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viladejulie.com.br/sitemap.xml
